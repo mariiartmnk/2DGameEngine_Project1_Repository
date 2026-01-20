@@ -13,9 +13,6 @@ public class UnityBasicsWorksheet : MonoBehaviour
     float myDecimal = 3.14f;
     string myText = "Hello Unity!";
     bool isAlive = true;
-    int age = 23
-    string name = "Ronan Carey"
-    int score = 69
     Vector3 myPosition = new Vector3(1, 2, 3);
     
     
@@ -49,7 +46,11 @@ public class UnityBasicsWorksheet : MonoBehaviour
         Debug.Log("My number: " + myNumber);
         Debug.Log("My text: " + myText);
         Debug.Log("Am I alive? " + isAlive);
-        Debug.Log("My name is " + name + ", I am " + age + " years old, and my score is " + score)
+
+        int age = 23;
+        string name = "Ronan Carey";
+        int score = 69;
+        Debug.Log("My name is " + name + ", I am " + age + " years old, and my score is " + score);
         
         // EXERCISE: Create variables and print them
         // 1. Create a variable called 'age' with your age
@@ -64,16 +65,27 @@ public class UnityBasicsWorksheet : MonoBehaviour
     {
         int a = 10;
         int b = 3;
+        int x = 20;
+        int y = 7;
         
         Debug.Log("10 + 3 = " + (a + b));
         Debug.Log("10 - 3 = " + (a - b));
         Debug.Log("10 * 3 = " + (a * b));
         Debug.Log("10 / 3 = " + (a / b));
         Debug.Log("10 % 3 = " + (a % b));  // Modulo (remainder)
+
+        Debug.Log("x + y = " + (x + y));
+        Debug.Log("x - y = " + (x - y));
+        Debug.Log("x * y = " + (x * y));
+        Debug.Log("x / y = " + (x / y));
+        Debug.Log("x % y = " + (x % y));
         
         // Random numbers (like p5.random())
         Debug.Log("Random 0-1: " + Random.value);
         Debug.Log("Random 1-10: " + Random.Range(1, 10));
+        Debug.Log("Random 1-100: " + Random.Range(1, 100));
+
+        Debug.Log("The area of a rectangle with a width of 5 and a height of 3 is " + (5 * 3));
         
         // EXERCISE: Do the math and print results
         // 1. Create two variables: x = 20, y = 7
@@ -87,6 +99,8 @@ public class UnityBasicsWorksheet : MonoBehaviour
     void TryIfStatements()
     {
         int x = 5;
+        int score = 85;
+        bool isStudent = true;
         
         if (x > 3)
         {
@@ -99,6 +113,28 @@ public class UnityBasicsWorksheet : MonoBehaviour
         else
         {
             Debug.Log("x is less than 3");
+        }
+
+        if (score >= 90)
+        {
+            Debug.Log("A");
+        }
+        else if (score >= 80)
+        {
+            Debug.Log("B");
+        }
+        else if (score >= 70)
+        {
+            Debug.Log("C");
+        }
+        else
+        {
+            debug.Log("F");
+        }
+
+        if (isStudent == true && score > 80)
+        {
+            Debug.Log("Good job!")
         }
         
         // Comparison operators:
@@ -135,8 +171,17 @@ public class UnityBasicsWorksheet : MonoBehaviour
             Debug.Log("Loop iteration: " + i);
         }
         
+        // Count up:
+        for (int i = 1; i < 11; i++)
+        {
+            Debug.Log("Count up from 10: " + i);
+        }
+
         // Count backwards:
-        // for (int i = 10; i > 0; i--) { }
+        for (int i = 10; i > 0; i--)
+        {
+            Debug.Log("Countdown from 10: " + i);
+        }
         
         // Count by 2s:
         // for (int i = 0; i < 10; i += 2) { }
